@@ -54,8 +54,8 @@
             // test2ToolStripMenuItem
             // 
             this.test2ToolStripMenuItem.Name = "test2ToolStripMenuItem";
-            this.test2ToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.test2ToolStripMenuItem.Text = "test2";
+            this.test2ToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
+            this.test2ToolStripMenuItem.Text = "testaaaaaaaaa";
             // 
             // Form1
             // 
