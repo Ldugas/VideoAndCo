@@ -48,8 +48,8 @@
             // testToolStripMenuItem
             // 
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.testToolStripMenuItem.Text = "test";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(32, 20);
+            this.testToolStripMenuItem.Text = "yo";
             // 
             // test2ToolStripMenuItem
             // 
