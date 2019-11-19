@@ -42,6 +42,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -100,6 +101,12 @@
     <Compile Include="FormFilm.Designer.cs">
       <DependentUpon>FormFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRechercheGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRechercheGenre.Designer.cs">
+      <DependentUpon>FormRechercheGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSaison.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormFilm.resx">
       <DependentUpon>FormFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRechercheGenre.resx">
+      <DependentUpon>FormRechercheGenre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSaison.resx">
       <DependentUpon>FormSaison.cs</DependentUpon>

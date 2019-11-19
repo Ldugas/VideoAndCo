@@ -36,5 +36,11 @@ namespace VideoAndCo
             FormClient fclient = new FormClient(); //Rôle de l’instruction ?
             fclient.Show(); //Rôle de l’instruction ?
         }
+
+        private void RechercheGenre1_Click(object sender, EventArgs e)
+        {
+            FormRechercheGenre frecherchegenre = new FormRechercheGenre(); //Rôle de l’instruction ?
+            frecherchegenre.Show(); //Rôle de l’instruction ?
+        }
     }
 }

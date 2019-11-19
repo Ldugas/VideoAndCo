@@ -113,6 +113,7 @@
             this.RechercheGenre1.Name = "RechercheGenre1";
             this.RechercheGenre1.Size = new System.Drawing.Size(195, 22);
             this.RechercheGenre1.Text = "Par Genre ";
+            this.RechercheGenre1.Click += new System.EventHandler(this.RechercheGenre1_Click);
             // 
             // RechercheSupport1
             // 
@@ -220,14 +221,14 @@
             // ComposantFilmAjout
             // 
             this.ComposantFilmAjout.Name = "ComposantFilmAjout";
-            this.ComposantFilmAjout.Size = new System.Drawing.Size(180, 22);
+            this.ComposantFilmAjout.Size = new System.Drawing.Size(142, 22);
             this.ComposantFilmAjout.Text = "Ajout";
             this.ComposantFilmAjout.Click += new System.EventHandler(this.ComposantFilmAjout_Click);
             // 
             // ComposantFilmModif
             // 
             this.ComposantFilmModif.Name = "ComposantFilmModif";
-            this.ComposantFilmModif.Size = new System.Drawing.Size(180, 22);
+            this.ComposantFilmModif.Size = new System.Drawing.Size(142, 22);
             this.ComposantFilmModif.Text = "Modification";
             // 
             // ComposantSérie
@@ -285,14 +286,14 @@
             // ComposantClientAjout
             // 
             this.ComposantClientAjout.Name = "ComposantClientAjout";
-            this.ComposantClientAjout.Size = new System.Drawing.Size(180, 22);
+            this.ComposantClientAjout.Size = new System.Drawing.Size(142, 22);
             this.ComposantClientAjout.Text = "Ajout";
             this.ComposantClientAjout.Click += new System.EventHandler(this.ComposantClientAjout_Click);
             // 
             // ComposantClientModif
             // 
             this.ComposantClientModif.Name = "ComposantClientModif";
-            this.ComposantClientModif.Size = new System.Drawing.Size(180, 22);
+            this.ComposantClientModif.Size = new System.Drawing.Size(142, 22);
             this.ComposantClientModif.Text = "Modification";
             // 
             // RechercheGenre
