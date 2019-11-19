@@ -198,7 +198,6 @@
             this.LabNomFilm.Size = new System.Drawing.Size(34, 13);
             this.LabNomFilm.TabIndex = 2;
             this.LabNomFilm.Text = "Titre :";
-            this.LabNomFilm.Click += new System.EventHandler(this.LabNomFilm_Click);
             // 
             // LabDuree
             // 
