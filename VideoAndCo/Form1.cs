@@ -20,21 +20,52 @@ namespace VideoAndCo
 
         private void ComposantFilmAjout_Click(object sender, EventArgs e)
         {
-            FormFilm ffilme= new FormFilm(); //Rôle de l’instruction ?
-            ffilme.Show(); //Rôle de l’instruction ?
+       
 
         }
 
         private void ComposantSaisonAjout_Click(object sender, EventArgs e)
         {
-            FormSaison fsaison = new FormSaison(); //Rôle de l’instruction ?
-            fsaison.Show(); //Rôle de l’instruction ?
+            
         }
 
         private void ComposantClientAjout_Click(object sender, EventArgs e)
         {
-            FormClient fclient = new FormClient(); //Rôle de l’instruction ?
+           
+        }
+
+        private void ComposantFilmAfficher_Click(object sender, EventArgs e)
+        {
+            FormAfficheFilm ffilme = new FormAfficheFilm(); //Rôle de l’instruction ?
+            ffilme.Show(); //Rôle de l’instruction ?
+        }
+
+        private void ComposantGenreAfficher_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComposantSerieAfficher_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComposantSaisonAfficher_Click(object sender, EventArgs e)
+        {
+            FormAfficheSaison fsaison = new FormAfficheSaison(); //Rôle de l’instruction ?
+            fsaison.Show(); //Rôle de l’instruction ?
+        }
+
+        private void ComposantClientAfficher_Click(object sender, EventArgs e)
+        {
+            FormAfficheClient fclient = new FormAfficheClient(); //Rôle de l’instruction ?
             fclient.Show(); //Rôle de l’instruction ?
+        }
+
+        private void ComposantFilmModif_Click(object sender, EventArgs e)
+        {
+            FormModifFilm fmodiffilm = new FormModifFilm(); //Rôle de l’instruction ?
+            fmodiffilm.Show(); //Rôle de l’instruction ?
         }
     }
 }

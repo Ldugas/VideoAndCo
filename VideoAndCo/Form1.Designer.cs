@@ -49,7 +49,7 @@
             this.ComposantFilm = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantFilmAjout = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantFilmModif = new System.Windows.Forms.ToolStripMenuItem();
-            this.ComposantSérie = new System.Windows.Forms.ToolStripMenuItem();
+            this.ComposantSerie = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantSérieAjout = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantSérieModif = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantSaison = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,6 +63,11 @@
             this.RechercheClient = new System.Windows.Forms.ToolStripMenuItem();
             this.RechercheRéférenceEmprunt = new System.Windows.Forms.ToolStripMenuItem();
             this.RechercheDateAbonnement = new System.Windows.Forms.ToolStripMenuItem();
+            this.ComposantFilmAfficher = new System.Windows.Forms.ToolStripMenuItem();
+            this.ComposantGenreAfficher = new System.Windows.Forms.ToolStripMenuItem();
+            this.ComposantSerieAfficher = new System.Windows.Forms.ToolStripMenuItem();
+            this.ComposantSaisonAfficher = new System.Windows.Forms.ToolStripMenuItem();
+            this.ComposantClientAfficher = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -180,7 +185,7 @@
             this.Composant.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ComposantGenre,
             this.ComposantFilm,
-            this.ComposantSérie,
+            this.ComposantSerie,
             this.ComposantSaison,
             this.ComposantClient});
             this.Composant.Name = "Composant";
@@ -191,7 +196,8 @@
             // 
             this.ComposantGenre.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ComposantGenreAjout,
-            this.ComposantGenreModif});
+            this.ComposantGenreModif,
+            this.ComposantGenreAfficher});
             this.ComposantGenre.Name = "ComposantGenre";
             this.ComposantGenre.Size = new System.Drawing.Size(180, 22);
             this.ComposantGenre.Text = "Genre";
@@ -199,20 +205,21 @@
             // ComposantGenreAjout
             // 
             this.ComposantGenreAjout.Name = "ComposantGenreAjout";
-            this.ComposantGenreAjout.Size = new System.Drawing.Size(142, 22);
+            this.ComposantGenreAjout.Size = new System.Drawing.Size(180, 22);
             this.ComposantGenreAjout.Text = "Ajout";
             // 
             // ComposantGenreModif
             // 
             this.ComposantGenreModif.Name = "ComposantGenreModif";
-            this.ComposantGenreModif.Size = new System.Drawing.Size(142, 22);
+            this.ComposantGenreModif.Size = new System.Drawing.Size(180, 22);
             this.ComposantGenreModif.Text = "Modification";
             // 
             // ComposantFilm
             // 
             this.ComposantFilm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ComposantFilmAjout,
-            this.ComposantFilmModif});
+            this.ComposantFilmModif,
+            this.ComposantFilmAfficher});
             this.ComposantFilm.Name = "ComposantFilm";
             this.ComposantFilm.Size = new System.Drawing.Size(180, 22);
             this.ComposantFilm.Text = "Film";
@@ -229,33 +236,37 @@
             this.ComposantFilmModif.Name = "ComposantFilmModif";
             this.ComposantFilmModif.Size = new System.Drawing.Size(180, 22);
             this.ComposantFilmModif.Text = "Modification";
+            this.ComposantFilmModif.Click += new System.EventHandler(this.ComposantFilmModif_Click);
             // 
-            // ComposantSérie
+            // ComposantSerie
             // 
-            this.ComposantSérie.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ComposantSerie.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ComposantSérieAjout,
-            this.ComposantSérieModif});
-            this.ComposantSérie.Name = "ComposantSérie";
-            this.ComposantSérie.Size = new System.Drawing.Size(180, 22);
-            this.ComposantSérie.Text = "Série";
+            this.ComposantSérieModif,
+            this.ComposantSerieAfficher});
+            this.ComposantSerie.Name = "ComposantSerie";
+            this.ComposantSerie.Size = new System.Drawing.Size(180, 22);
+            this.ComposantSerie.Text = "Série";
+            this.ComposantSerie.Click += new System.EventHandler(this.ComposantSerieAfficher_Click);
             // 
             // ComposantSérieAjout
             // 
             this.ComposantSérieAjout.Name = "ComposantSérieAjout";
-            this.ComposantSérieAjout.Size = new System.Drawing.Size(142, 22);
+            this.ComposantSérieAjout.Size = new System.Drawing.Size(180, 22);
             this.ComposantSérieAjout.Text = "Ajout";
             // 
             // ComposantSérieModif
             // 
             this.ComposantSérieModif.Name = "ComposantSérieModif";
-            this.ComposantSérieModif.Size = new System.Drawing.Size(142, 22);
+            this.ComposantSérieModif.Size = new System.Drawing.Size(180, 22);
             this.ComposantSérieModif.Text = "Modification";
             // 
             // ComposantSaison
             // 
             this.ComposantSaison.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ComposantSaisonAjout,
-            this.ComposantSaisonModif});
+            this.ComposantSaisonModif,
+            this.ComposantSaisonAfficher});
             this.ComposantSaison.Name = "ComposantSaison";
             this.ComposantSaison.Size = new System.Drawing.Size(180, 22);
             this.ComposantSaison.Text = "Saison";
@@ -277,7 +288,8 @@
             // 
             this.ComposantClient.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ComposantClientAjout,
-            this.ComposantClientModif});
+            this.ComposantClientModif,
+            this.ComposantClientAfficher});
             this.ComposantClient.Name = "ComposantClient";
             this.ComposantClient.Size = new System.Drawing.Size(180, 22);
             this.ComposantClient.Text = "Client";
@@ -325,6 +337,40 @@
             this.RechercheDateAbonnement.Size = new System.Drawing.Size(195, 22);
             this.RechercheDateAbonnement.Text = "Par Date Abonnement";
             // 
+            // ComposantFilmAfficher
+            // 
+            this.ComposantFilmAfficher.Name = "ComposantFilmAfficher";
+            this.ComposantFilmAfficher.Size = new System.Drawing.Size(180, 22);
+            this.ComposantFilmAfficher.Text = "Afficher";
+            this.ComposantFilmAfficher.Click += new System.EventHandler(this.ComposantFilmAfficher_Click);
+            // 
+            // ComposantGenreAfficher
+            // 
+            this.ComposantGenreAfficher.Name = "ComposantGenreAfficher";
+            this.ComposantGenreAfficher.Size = new System.Drawing.Size(180, 22);
+            this.ComposantGenreAfficher.Text = "Afficher";
+            this.ComposantGenreAfficher.Click += new System.EventHandler(this.ComposantGenreAfficher_Click);
+            // 
+            // ComposantSerieAfficher
+            // 
+            this.ComposantSerieAfficher.Name = "ComposantSerieAfficher";
+            this.ComposantSerieAfficher.Size = new System.Drawing.Size(180, 22);
+            this.ComposantSerieAfficher.Text = "Afficher";
+            // 
+            // ComposantSaisonAfficher
+            // 
+            this.ComposantSaisonAfficher.Name = "ComposantSaisonAfficher";
+            this.ComposantSaisonAfficher.Size = new System.Drawing.Size(180, 22);
+            this.ComposantSaisonAfficher.Text = "Afficher";
+            this.ComposantSaisonAfficher.Click += new System.EventHandler(this.ComposantSaisonAfficher_Click);
+            // 
+            // ComposantClientAfficher
+            // 
+            this.ComposantClientAfficher.Name = "ComposantClientAfficher";
+            this.ComposantClientAfficher.Size = new System.Drawing.Size(180, 22);
+            this.ComposantClientAfficher.Text = "Afficher";
+            this.ComposantClientAfficher.Click += new System.EventHandler(this.ComposantClientAfficher_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,7 +409,7 @@
         private System.Windows.Forms.ToolStripMenuItem ComposantFilm;
         private System.Windows.Forms.ToolStripMenuItem ComposantFilmAjout;
         private System.Windows.Forms.ToolStripMenuItem ComposantFilmModif;
-        private System.Windows.Forms.ToolStripMenuItem ComposantSérie;
+        private System.Windows.Forms.ToolStripMenuItem ComposantSerie;
         private System.Windows.Forms.ToolStripMenuItem ComposantSérieAjout;
         private System.Windows.Forms.ToolStripMenuItem ComposantSérieModif;
         private System.Windows.Forms.ToolStripMenuItem ComposantSaison;
@@ -379,6 +425,11 @@
         private System.Windows.Forms.ToolStripMenuItem RechercheClient1;
         private System.Windows.Forms.ToolStripMenuItem RechercheRefEmprunt;
         private System.Windows.Forms.ToolStripMenuItem RechercheDatAbonnement;
+        private System.Windows.Forms.ToolStripMenuItem ComposantFilmAfficher;
+        private System.Windows.Forms.ToolStripMenuItem ComposantGenreAfficher;
+        private System.Windows.Forms.ToolStripMenuItem ComposantSerieAfficher;
+        private System.Windows.Forms.ToolStripMenuItem ComposantSaisonAfficher;
+        private System.Windows.Forms.ToolStripMenuItem ComposantClientAfficher;
     }
 }
 

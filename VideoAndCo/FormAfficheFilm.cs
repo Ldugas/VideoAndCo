@@ -7,19 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.Entity;
 
 namespace VideoAndCo
 {
-    public partial class FormSaison : Form
+    public partial class FormAfficheFilm : Form
     {
         private videoppe3_Dugas_Guilloteau_PereiraEntities1 maConnexion;
-        public FormSaison()
+        public FormAfficheFilm()
         {
             InitializeComponent();
             maConnexion = new videoppe3_Dugas_Guilloteau_PereiraEntities1();
             /* le  bindingSource  bsVille est connecté à la table Ville de la BDD  via la chaîne de connexion */
-            BSSaison.DataSource = maConnexion.saison.ToList();
+            BSFilm.DataSource = maConnexion.film.ToList();
+
+        }
+
+        private void BindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
