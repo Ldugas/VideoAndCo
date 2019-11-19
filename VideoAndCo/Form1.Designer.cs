@@ -31,6 +31,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Fichier = new System.Windows.Forms.ToolStripMenuItem();
             this.FichierQuitter = new System.Windows.Forms.ToolStripMenuItem();
+            this.Recherche = new System.Windows.Forms.ToolStripMenuItem();
+            this.RechercheGenre1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.RechercheSupport1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.RechercheClient1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.RechercheRefEmprunt = new System.Windows.Forms.ToolStripMenuItem();
+            this.RechercheDatAbonnement = new System.Windows.Forms.ToolStripMenuItem();
             this.Compte = new System.Windows.Forms.ToolStripMenuItem();
             this.CompteValid = new System.Windows.Forms.ToolStripMenuItem();
             this.CompteVérif = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,12 +63,6 @@
             this.RechercheClient = new System.Windows.Forms.ToolStripMenuItem();
             this.RechercheRéférenceEmprunt = new System.Windows.Forms.ToolStripMenuItem();
             this.RechercheDateAbonnement = new System.Windows.Forms.ToolStripMenuItem();
-            this.Recherche = new System.Windows.Forms.ToolStripMenuItem();
-            this.RechercheGenre1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.RechercheSupport1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.RechercheClient1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.RechercheRefEmprunt = new System.Windows.Forms.ToolStripMenuItem();
-            this.RechercheDatAbonnement = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,8 +93,50 @@
             // FichierQuitter
             // 
             this.FichierQuitter.Name = "FichierQuitter";
-            this.FichierQuitter.Size = new System.Drawing.Size(180, 22);
+            this.FichierQuitter.Size = new System.Drawing.Size(111, 22);
             this.FichierQuitter.Text = "Quitter";
+            // 
+            // Recherche
+            // 
+            this.Recherche.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RechercheGenre1,
+            this.RechercheSupport1,
+            this.RechercheClient1,
+            this.RechercheRefEmprunt,
+            this.RechercheDatAbonnement});
+            this.Recherche.Name = "Recherche";
+            this.Recherche.Size = new System.Drawing.Size(74, 20);
+            this.Recherche.Text = "Recherche";
+            // 
+            // RechercheGenre1
+            // 
+            this.RechercheGenre1.Name = "RechercheGenre1";
+            this.RechercheGenre1.Size = new System.Drawing.Size(195, 22);
+            this.RechercheGenre1.Text = "Par Genre ";
+            // 
+            // RechercheSupport1
+            // 
+            this.RechercheSupport1.Name = "RechercheSupport1";
+            this.RechercheSupport1.Size = new System.Drawing.Size(195, 22);
+            this.RechercheSupport1.Text = "Par Support";
+            // 
+            // RechercheClient1
+            // 
+            this.RechercheClient1.Name = "RechercheClient1";
+            this.RechercheClient1.Size = new System.Drawing.Size(195, 22);
+            this.RechercheClient1.Text = "Par Client";
+            // 
+            // RechercheRefEmprunt
+            // 
+            this.RechercheRefEmprunt.Name = "RechercheRefEmprunt";
+            this.RechercheRefEmprunt.Size = new System.Drawing.Size(195, 22);
+            this.RechercheRefEmprunt.Text = "Par Référence Emprunt";
+            // 
+            // RechercheDatAbonnement
+            // 
+            this.RechercheDatAbonnement.Name = "RechercheDatAbonnement";
+            this.RechercheDatAbonnement.Size = new System.Drawing.Size(195, 22);
+            this.RechercheDatAbonnement.Text = "Par Date Abonnement";
             // 
             // Compte
             // 
@@ -178,14 +220,14 @@
             // ComposantFilmAjout
             // 
             this.ComposantFilmAjout.Name = "ComposantFilmAjout";
-            this.ComposantFilmAjout.Size = new System.Drawing.Size(142, 22);
+            this.ComposantFilmAjout.Size = new System.Drawing.Size(180, 22);
             this.ComposantFilmAjout.Text = "Ajout";
             this.ComposantFilmAjout.Click += new System.EventHandler(this.ComposantFilmAjout_Click);
             // 
             // ComposantFilmModif
             // 
             this.ComposantFilmModif.Name = "ComposantFilmModif";
-            this.ComposantFilmModif.Size = new System.Drawing.Size(142, 22);
+            this.ComposantFilmModif.Size = new System.Drawing.Size(180, 22);
             this.ComposantFilmModif.Text = "Modification";
             // 
             // ComposantSérie
@@ -221,13 +263,14 @@
             // ComposantSaisonAjout
             // 
             this.ComposantSaisonAjout.Name = "ComposantSaisonAjout";
-            this.ComposantSaisonAjout.Size = new System.Drawing.Size(142, 22);
+            this.ComposantSaisonAjout.Size = new System.Drawing.Size(180, 22);
             this.ComposantSaisonAjout.Text = "Ajout";
+            this.ComposantSaisonAjout.Click += new System.EventHandler(this.ComposantSaisonAjout_Click);
             // 
             // ComposantSaisonModif
             // 
             this.ComposantSaisonModif.Name = "ComposantSaisonModif";
-            this.ComposantSaisonModif.Size = new System.Drawing.Size(142, 22);
+            this.ComposantSaisonModif.Size = new System.Drawing.Size(180, 22);
             this.ComposantSaisonModif.Text = "Modification";
             // 
             // ComposantClient
@@ -280,48 +323,6 @@
             this.RechercheDateAbonnement.Name = "RechercheDateAbonnement";
             this.RechercheDateAbonnement.Size = new System.Drawing.Size(195, 22);
             this.RechercheDateAbonnement.Text = "Par Date Abonnement";
-            // 
-            // Recherche
-            // 
-            this.Recherche.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RechercheGenre1,
-            this.RechercheSupport1,
-            this.RechercheClient1,
-            this.RechercheRefEmprunt,
-            this.RechercheDatAbonnement});
-            this.Recherche.Name = "Recherche";
-            this.Recherche.Size = new System.Drawing.Size(74, 20);
-            this.Recherche.Text = "Recherche";
-            // 
-            // RechercheGenre1
-            // 
-            this.RechercheGenre1.Name = "RechercheGenre1";
-            this.RechercheGenre1.Size = new System.Drawing.Size(195, 22);
-            this.RechercheGenre1.Text = "Par Genre ";
-            // 
-            // RechercheSupport1
-            // 
-            this.RechercheSupport1.Name = "RechercheSupport1";
-            this.RechercheSupport1.Size = new System.Drawing.Size(195, 22);
-            this.RechercheSupport1.Text = "Par Support";
-            // 
-            // RechercheClient1
-            // 
-            this.RechercheClient1.Name = "RechercheClient1";
-            this.RechercheClient1.Size = new System.Drawing.Size(195, 22);
-            this.RechercheClient1.Text = "Par Client";
-            // 
-            // RechercheRefEmprunt
-            // 
-            this.RechercheRefEmprunt.Name = "RechercheRefEmprunt";
-            this.RechercheRefEmprunt.Size = new System.Drawing.Size(195, 22);
-            this.RechercheRefEmprunt.Text = "Par Référence Emprunt";
-            // 
-            // RechercheDatAbonnement
-            // 
-            this.RechercheDatAbonnement.Name = "RechercheDatAbonnement";
-            this.RechercheDatAbonnement.Size = new System.Drawing.Size(195, 22);
-            this.RechercheDatAbonnement.Text = "Par Date Abonnement";
             // 
             // Form1
             // 

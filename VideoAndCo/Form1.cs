@@ -24,5 +24,11 @@ namespace VideoAndCo
             ffilme.Show(); //Rôle de l’instruction ?
 
         }
+
+        private void ComposantSaisonAjout_Click(object sender, EventArgs e)
+        {
+            FormSaison fsaison = new FormSaison(); //Rôle de l’instruction ?
+            fsaison.Show(); //Rôle de l’instruction ?
+        }
     }
 }
