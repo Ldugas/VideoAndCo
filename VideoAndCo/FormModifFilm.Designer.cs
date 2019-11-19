@@ -49,10 +49,11 @@
             this.TBNomFilm = new System.Windows.Forms.TextBox();
             this.TBDuree = new System.Windows.Forms.TextBox();
             this.TBRealisateur = new System.Windows.Forms.TextBox();
-            this.BSFilm = new System.Windows.Forms.BindingSource(this.components);
-            this.BSUnFilm = new System.Windows.Forms.BindingSource(this.components);
             this.TBGenre = new System.Windows.Forms.TextBox();
             this.LabGenre = new System.Windows.Forms.Label();
+            this.BSFilm = new System.Windows.Forms.BindingSource(this.components);
+            this.BSUnFilm = new System.Windows.Forms.BindingSource(this.components);
+            this.BTNSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BNFilm)).BeginInit();
             this.BNFilm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBImageFilm)).BeginInit();
@@ -141,7 +142,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -232,15 +232,6 @@
             this.TBRealisateur.Size = new System.Drawing.Size(264, 20);
             this.TBRealisateur.TabIndex = 7;
             // 
-            // BSFilm
-            // 
-            this.BSFilm.DataSource = typeof(VideoAndCo.film);
-            this.BSFilm.CurrentChanged += new System.EventHandler(this.BSFilm_CurrentChanged);
-            // 
-            // BSUnFilm
-            // 
-            this.BSUnFilm.DataSource = typeof(VideoAndCo.film);
-            // 
             // TBGenre
             // 
             this.TBGenre.Location = new System.Drawing.Point(496, 201);
@@ -257,11 +248,31 @@
             this.LabGenre.TabIndex = 8;
             this.LabGenre.Text = "Genre :";
             // 
+            // BSFilm
+            // 
+            this.BSFilm.DataSource = typeof(VideoAndCo.film);
+            this.BSFilm.CurrentChanged += new System.EventHandler(this.BSFilm_CurrentChanged);
+            // 
+            // BSUnFilm
+            // 
+            this.BSUnFilm.DataSource = typeof(VideoAndCo.film);
+            // 
+            // BTNSave
+            // 
+            this.BTNSave.Location = new System.Drawing.Point(616, 377);
+            this.BTNSave.Name = "BTNSave";
+            this.BTNSave.Size = new System.Drawing.Size(144, 45);
+            this.BTNSave.TabIndex = 10;
+            this.BTNSave.Text = "Sauvegarder";
+            this.BTNSave.UseVisualStyleBackColor = true;
+            this.BTNSave.Click += new System.EventHandler(this.BTNSave_Click);
+            // 
             // FormModifFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BTNSave);
             this.Controls.Add(this.TBGenre);
             this.Controls.Add(this.LabGenre);
             this.Controls.Add(this.TBRealisateur);
@@ -309,5 +320,6 @@
         private System.Windows.Forms.BindingSource BSFilm;
         private System.Windows.Forms.TextBox TBGenre;
         private System.Windows.Forms.Label LabGenre;
+        private System.Windows.Forms.Button BTNSave;
     }
 }

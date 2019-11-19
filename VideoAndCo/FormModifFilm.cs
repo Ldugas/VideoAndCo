@@ -14,6 +14,12 @@ namespace VideoAndCo
     public partial class FormModifFilm : Form
     {
         private videoppe3_Dugas_Guilloteau_PereiraEntities1 maConnexion;
+        private string Titre;
+        private string Realistaeur;
+        private string Duree;
+        private string Genre;
+
+
         public FormModifFilm()
         {
             InitializeComponent();
@@ -57,6 +63,14 @@ namespace VideoAndCo
             PBImageFilm.ImageLocation = "C:/wamp64/www/ApplicationDeBase/Images/" + vcurrent.support.image.ToString();
 
 
+        }
+
+        private void BTNSave_Click(object sender, EventArgs e)
+        {
+            if (Titre != TBNomFilm.Text.ToString() || Realistaeur != TBRealisateur.Text.ToString() || Duree != TBDuree.Text.ToString() || Genre != TBGenre.Text.ToString())
+            {
+                
+            }
         }
     }
 }
