@@ -11,20 +11,15 @@ using System.Data.Entity;
 
 namespace VideoAndCo
 {
-    public partial class FormClient : Form
+    public partial class FormAfficheSaison : Form
     {
         private videoppe3_Dugas_Guilloteau_PereiraEntities1 maConnexion;
-        public FormClient()
+        public FormAfficheSaison()
         {
             InitializeComponent();
             maConnexion = new videoppe3_Dugas_Guilloteau_PereiraEntities1();
             /* le  bindingSource  bsVille est connecté à la table Ville de la BDD  via la chaîne de connexion */
-            BSClient.DataSource = maConnexion.client.ToList();
-        }
-
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            BSSaison.DataSource = maConnexion.saison.ToList();
         }
     }
 }

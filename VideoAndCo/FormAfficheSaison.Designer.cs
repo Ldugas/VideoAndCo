@@ -1,6 +1,6 @@
 ﻿namespace VideoAndCo
 {
-    partial class FormSaison
+    partial class FormAfficheSaison
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.DGSaison = new System.Windows.Forms.DataGridView();
-            this.BSSaison = new System.Windows.Forms.BindingSource(this.components);
             this.idSerieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numSaisonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anneeSaisonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nbrEpisodesPrevusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.episodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BSSaison = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DGSaison)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BSSaison)).BeginInit();
             this.SuspendLayout();
@@ -53,14 +53,10 @@
             this.episodeDataGridViewTextBoxColumn,
             this.serieDataGridViewTextBoxColumn});
             this.DGSaison.DataSource = this.BSSaison;
-            this.DGSaison.Location = new System.Drawing.Point(272, 136);
+            this.DGSaison.Location = new System.Drawing.Point(1, 1);
             this.DGSaison.Name = "DGSaison";
-            this.DGSaison.Size = new System.Drawing.Size(240, 150);
+            this.DGSaison.Size = new System.Drawing.Size(641, 446);
             this.DGSaison.TabIndex = 0;
-            // 
-            // BSSaison
-            // 
-            this.BSSaison.DataSource = typeof(VideoAndCo.saison);
             // 
             // idSerieDataGridViewTextBoxColumn
             // 
@@ -98,11 +94,15 @@
             this.serieDataGridViewTextBoxColumn.HeaderText = "serie";
             this.serieDataGridViewTextBoxColumn.Name = "serieDataGridViewTextBoxColumn";
             // 
+            // BSSaison
+            // 
+            this.BSSaison.DataSource = typeof(VideoAndCo.saison);
+            // 
             // FormSaison
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(643, 448);
             this.Controls.Add(this.DGSaison);
             this.Name = "FormSaison";
             this.Text = "FormSaison";

@@ -1,6 +1,6 @@
 ﻿namespace VideoAndCo
 {
-    partial class FormFilm
+    partial class FormAfficheFilm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.DGFilm = new System.Windows.Forms.DataGridView();
-            this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idFilmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dureeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idSupportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BSFilm = new System.Windows.Forms.BindingSource(this.components);
+            this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DGFilm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BSFilm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DGFilm
@@ -51,14 +51,10 @@
             this.idSupportDataGridViewTextBoxColumn,
             this.supportDataGridViewTextBoxColumn});
             this.DGFilm.DataSource = this.BSFilm;
-            this.DGFilm.Location = new System.Drawing.Point(96, 67);
+            this.DGFilm.Location = new System.Drawing.Point(-4, 0);
             this.DGFilm.Name = "DGFilm";
-            this.DGFilm.Size = new System.Drawing.Size(240, 150);
+            this.DGFilm.Size = new System.Drawing.Size(443, 447);
             this.DGFilm.TabIndex = 0;
-            // 
-            // filmBindingSource
-            // 
-            this.filmBindingSource.DataSource = typeof(VideoAndCo.film);
             // 
             // idFilmDataGridViewTextBoxColumn
             // 
@@ -88,17 +84,21 @@
             // 
             this.BSFilm.DataSource = this.filmBindingSource;
             // 
+            // filmBindingSource
+            // 
+            this.filmBindingSource.DataSource = typeof(VideoAndCo.film);
+            // 
             // FormFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(440, 448);
             this.Controls.Add(this.DGFilm);
             this.Name = "FormFilm";
             this.Text = "FormFilm";
             ((System.ComponentModel.ISupportInitialize)(this.DGFilm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BSFilm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

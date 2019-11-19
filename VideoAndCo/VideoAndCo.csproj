@@ -89,17 +89,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormClient.cs">
+    <Compile Include="FormAfficheClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormClient.Designer.cs">
-      <DependentUpon>FormClient.cs</DependentUpon>
+    <Compile Include="FormAfficheClient.Designer.cs">
+      <DependentUpon>FormAfficheClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormFilm.cs">
+    <Compile Include="FormAfficheFilm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormFilm.Designer.cs">
-      <DependentUpon>FormFilm.cs</DependentUpon>
+    <Compile Include="FormAfficheFilm.Designer.cs">
+      <DependentUpon>FormAfficheFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAfficheSaison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAfficheSaison.Designer.cs">
+      <DependentUpon>FormAfficheSaison.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRechercheGenre.cs">
       <SubType>Form</SubType>
@@ -108,10 +114,11 @@
       <DependentUpon>FormRechercheGenre.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSaison.cs">
+    <Compile Include="FormModifFilm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSaison.Designer.cs">
-      <DependentUpon>FormSaison.cs</DependentUpon>
+    <Compile Include="FormModifFilm.Designer.cs">
+      <DependentUpon>FormModifFilm.cs</DependentUpon>
     </Compile>
     <Compile Include="genre.cs">
       <DependentUpon>BaseDeDonnee.tt</DependentUpon>
@@ -133,17 +140,22 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormClient.resx">
-      <DependentUpon>FormClient.cs</DependentUpon>
+    <EmbeddedResource Include="FormAfficheClient.resx">
+      <DependentUpon>FormAfficheClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormFilm.resx">
-      <DependentUpon>FormFilm.cs</DependentUpon>
+    <EmbeddedResource Include="FormAfficheFilm.resx">
+      <DependentUpon>FormAfficheFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAfficheSaison.resx">
+      <DependentUpon>FormAfficheSaison.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRechercheGenre.resx">
       <DependentUpon>FormRechercheGenre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSaison.resx">
       <DependentUpon>FormSaison.cs</DependentUpon>
+    <EmbeddedResource Include="FormModifFilm.resx">
+      <DependentUpon>FormModifFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
