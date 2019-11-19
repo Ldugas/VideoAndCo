@@ -285,13 +285,14 @@
             // ComposantClientAjout
             // 
             this.ComposantClientAjout.Name = "ComposantClientAjout";
-            this.ComposantClientAjout.Size = new System.Drawing.Size(142, 22);
+            this.ComposantClientAjout.Size = new System.Drawing.Size(180, 22);
             this.ComposantClientAjout.Text = "Ajout";
+            this.ComposantClientAjout.Click += new System.EventHandler(this.ComposantClientAjout_Click);
             // 
             // ComposantClientModif
             // 
             this.ComposantClientModif.Name = "ComposantClientModif";
-            this.ComposantClientModif.Size = new System.Drawing.Size(142, 22);
+            this.ComposantClientModif.Size = new System.Drawing.Size(180, 22);
             this.ComposantClientModif.Text = "Modification";
             // 
             // RechercheGenre
