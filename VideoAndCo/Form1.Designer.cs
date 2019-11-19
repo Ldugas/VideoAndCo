@@ -30,8 +30,8 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Fichier = new System.Windows.Forms.ToolStripMenuItem();
-            this.Recherche = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Recherche = new System.Windows.Forms.ToolStripMenuItem();
             this.RechercheGenre = new System.Windows.Forms.ToolStripMenuItem();
             this.RechercheSupport = new System.Windows.Forms.ToolStripMenuItem();
             this.RechercheClient = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,9 +53,9 @@
             this.ComposantSérieAjout = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantSérieModif = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantSaison = new System.Windows.Forms.ToolStripMenuItem();
-            this.ComposantClient = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantSaisonAjout = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantSaisonModif = new System.Windows.Forms.ToolStripMenuItem();
+            this.ComposantClient = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantClientAjout = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantClientModif = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -82,6 +82,12 @@
             this.Fichier.Size = new System.Drawing.Size(54, 20);
             this.Fichier.Text = "Fichier";
             // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.quitterToolStripMenuItem.Text = "Quitter";
+            // 
             // Recherche
             // 
             this.Recherche.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -93,12 +99,6 @@
             this.Recherche.Name = "Recherche";
             this.Recherche.Size = new System.Drawing.Size(79, 20);
             this.Recherche.Text = "Recherches";
-            // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.quitterToolStripMenuItem.Text = "Quitter";
             // 
             // RechercheGenre
             // 
@@ -189,13 +189,13 @@
             // ComposantGenreAjout
             // 
             this.ComposantGenreAjout.Name = "ComposantGenreAjout";
-            this.ComposantGenreAjout.Size = new System.Drawing.Size(180, 22);
+            this.ComposantGenreAjout.Size = new System.Drawing.Size(142, 22);
             this.ComposantGenreAjout.Text = "Ajout";
             // 
             // ComposantGenreModif
             // 
             this.ComposantGenreModif.Name = "ComposantGenreModif";
-            this.ComposantGenreModif.Size = new System.Drawing.Size(180, 22);
+            this.ComposantGenreModif.Size = new System.Drawing.Size(142, 22);
             this.ComposantGenreModif.Text = "Modification";
             // 
             // ComposantFilm
@@ -212,6 +212,7 @@
             this.ComposantFilmAjout.Name = "ComposantFilmAjout";
             this.ComposantFilmAjout.Size = new System.Drawing.Size(180, 22);
             this.ComposantFilmAjout.Text = "Ajout";
+            this.ComposantFilmAjout.Click += new System.EventHandler(this.ComposantFilmAjout_Click);
             // 
             // ComposantFilmModif
             // 
@@ -231,13 +232,13 @@
             // ComposantSérieAjout
             // 
             this.ComposantSérieAjout.Name = "ComposantSérieAjout";
-            this.ComposantSérieAjout.Size = new System.Drawing.Size(180, 22);
+            this.ComposantSérieAjout.Size = new System.Drawing.Size(142, 22);
             this.ComposantSérieAjout.Text = "Ajout";
             // 
             // ComposantSérieModif
             // 
             this.ComposantSérieModif.Name = "ComposantSérieModif";
-            this.ComposantSérieModif.Size = new System.Drawing.Size(180, 22);
+            this.ComposantSérieModif.Size = new System.Drawing.Size(142, 22);
             this.ComposantSérieModif.Text = "Modification";
             // 
             // ComposantSaison
@@ -249,6 +250,18 @@
             this.ComposantSaison.Size = new System.Drawing.Size(180, 22);
             this.ComposantSaison.Text = "Saison";
             // 
+            // ComposantSaisonAjout
+            // 
+            this.ComposantSaisonAjout.Name = "ComposantSaisonAjout";
+            this.ComposantSaisonAjout.Size = new System.Drawing.Size(142, 22);
+            this.ComposantSaisonAjout.Text = "Ajout";
+            // 
+            // ComposantSaisonModif
+            // 
+            this.ComposantSaisonModif.Name = "ComposantSaisonModif";
+            this.ComposantSaisonModif.Size = new System.Drawing.Size(142, 22);
+            this.ComposantSaisonModif.Text = "Modification";
+            // 
             // ComposantClient
             // 
             this.ComposantClient.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -258,28 +271,16 @@
             this.ComposantClient.Size = new System.Drawing.Size(180, 22);
             this.ComposantClient.Text = "Client";
             // 
-            // ComposantSaisonAjout
-            // 
-            this.ComposantSaisonAjout.Name = "ComposantSaisonAjout";
-            this.ComposantSaisonAjout.Size = new System.Drawing.Size(180, 22);
-            this.ComposantSaisonAjout.Text = "Ajout";
-            // 
-            // ComposantSaisonModif
-            // 
-            this.ComposantSaisonModif.Name = "ComposantSaisonModif";
-            this.ComposantSaisonModif.Size = new System.Drawing.Size(180, 22);
-            this.ComposantSaisonModif.Text = "Modification";
-            // 
             // ComposantClientAjout
             // 
             this.ComposantClientAjout.Name = "ComposantClientAjout";
-            this.ComposantClientAjout.Size = new System.Drawing.Size(180, 22);
+            this.ComposantClientAjout.Size = new System.Drawing.Size(142, 22);
             this.ComposantClientAjout.Text = "Ajout";
             // 
             // ComposantClientModif
             // 
             this.ComposantClientModif.Name = "ComposantClientModif";
-            this.ComposantClientModif.Size = new System.Drawing.Size(180, 22);
+            this.ComposantClientModif.Size = new System.Drawing.Size(142, 22);
             this.ComposantClientModif.Text = "Modification";
             // 
             // Form1

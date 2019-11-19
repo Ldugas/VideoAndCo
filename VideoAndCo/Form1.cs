@@ -17,5 +17,12 @@ namespace VideoAndCo
             InitializeComponent();
             /*eeeeettttttteee*/
         }
+
+        private void ComposantFilmAjout_Click(object sender, EventArgs e)
+        {
+            FormFilm ffilme= new FormFilm(); //Rôle de l’instruction ?
+            ffilme.Show(); //Rôle de l’instruction ?
+
+        }
     }
 }
