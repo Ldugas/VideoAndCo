@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormModifFilm));
             this.BNFilm = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.BSFilm = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -51,13 +52,12 @@
             this.TBRealisateur = new System.Windows.Forms.TextBox();
             this.TBGenre = new System.Windows.Forms.TextBox();
             this.LabGenre = new System.Windows.Forms.Label();
-            this.BSFilm = new System.Windows.Forms.BindingSource(this.components);
             this.BSUnFilm = new System.Windows.Forms.BindingSource(this.components);
             this.BTNSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BNFilm)).BeginInit();
             this.BNFilm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBImageFilm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BSFilm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBImageFilm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BSUnFilm)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,6 +98,11 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Ajouter nouveau";
+            // 
+            // BSFilm
+            // 
+            this.BSFilm.DataSource = typeof(VideoAndCo.film);
+            this.BSFilm.CurrentChanged += new System.EventHandler(this.BSFilm_CurrentChanged);
             // 
             // bindingNavigatorCountItem
             // 
@@ -142,6 +147,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -192,6 +198,7 @@
             this.LabNomFilm.Size = new System.Drawing.Size(34, 13);
             this.LabNomFilm.TabIndex = 2;
             this.LabNomFilm.Text = "Titre :";
+            this.LabNomFilm.Click += new System.EventHandler(this.LabNomFilm_Click);
             // 
             // LabDuree
             // 
@@ -248,11 +255,6 @@
             this.LabGenre.TabIndex = 8;
             this.LabGenre.Text = "Genre :";
             // 
-            // BSFilm
-            // 
-            this.BSFilm.DataSource = typeof(VideoAndCo.film);
-            this.BSFilm.CurrentChanged += new System.EventHandler(this.BSFilm_CurrentChanged);
-            // 
             // BSUnFilm
             // 
             this.BSUnFilm.DataSource = typeof(VideoAndCo.film);
@@ -288,8 +290,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BNFilm)).EndInit();
             this.BNFilm.ResumeLayout(false);
             this.BNFilm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBImageFilm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BSFilm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBImageFilm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BSUnFilm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

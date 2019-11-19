@@ -114,6 +114,7 @@
       <DependentUpon>FormRechercheGenre.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSaison.cs">
+    </Compile>  
     <Compile Include="FormModifFilm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +155,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSaison.resx">
       <DependentUpon>FormSaison.cs</DependentUpon>
+    </EmbeddedResource> 
     <EmbeddedResource Include="FormModifFilm.resx">
       <DependentUpon>FormModifFilm.cs</DependentUpon>
     </EmbeddedResource>
