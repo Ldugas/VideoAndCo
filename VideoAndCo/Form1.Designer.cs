@@ -30,8 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Fichier = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Recherche = new System.Windows.Forms.ToolStripMenuItem();
             this.RechercheGenre = new System.Windows.Forms.ToolStripMenuItem();
             this.RechercheSupport = new System.Windows.Forms.ToolStripMenuItem();
             this.RechercheClient = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,6 +61,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Fichier,
             this.Recherche,
@@ -76,8 +75,10 @@
             // 
             // Fichier
             // 
+            this.Fichier.BackColor = System.Drawing.Color.Silver;
             this.Fichier.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quitterToolStripMenuItem});
+            this.FichierQuitter});
+            this.Fichier.ForeColor = System.Drawing.Color.Black;
             this.Fichier.Name = "Fichier";
             this.Fichier.Size = new System.Drawing.Size(54, 20);
             this.Fichier.Text = "Fichier";
@@ -90,6 +91,7 @@
             // 
             // Recherche
             // 
+            this.Recherche.BackColor = System.Drawing.Color.Silver;
             this.Recherche.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RechercheGenre,
             this.RechercheSupport,
@@ -132,6 +134,7 @@
             // 
             // Compte
             // 
+            this.Compte.BackColor = System.Drawing.Color.Silver;
             this.Compte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CompteValid,
             this.CompteVérif,
@@ -167,6 +170,7 @@
             // 
             // Composant
             // 
+            this.Composant.BackColor = System.Drawing.Color.Silver;
             this.Composant.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ComposantGenre,
             this.ComposantFilm,
@@ -206,18 +210,19 @@
             this.ComposantFilm.Name = "ComposantFilm";
             this.ComposantFilm.Size = new System.Drawing.Size(180, 22);
             this.ComposantFilm.Text = "Film";
+            this.ComposantFilm.Click += new System.EventHandler(this.ComposantFilm_Click);
             // 
             // ComposantFilmAjout
             // 
             this.ComposantFilmAjout.Name = "ComposantFilmAjout";
-            this.ComposantFilmAjout.Size = new System.Drawing.Size(180, 22);
+            this.ComposantFilmAjout.Size = new System.Drawing.Size(142, 22);
             this.ComposantFilmAjout.Text = "Ajout";
             this.ComposantFilmAjout.Click += new System.EventHandler(this.ComposantFilmAjout_Click);
             // 
             // ComposantFilmModif
             // 
             this.ComposantFilmModif.Name = "ComposantFilmModif";
-            this.ComposantFilmModif.Size = new System.Drawing.Size(180, 22);
+            this.ComposantFilmModif.Size = new System.Drawing.Size(142, 22);
             this.ComposantFilmModif.Text = "Modification";
             // 
             // ComposantSérie
@@ -287,11 +292,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Page d\'accueil";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -304,7 +311,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Fichier;
         private System.Windows.Forms.ToolStripMenuItem Recherche;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem FichierQuitter;
         private System.Windows.Forms.ToolStripMenuItem RechercheGenre;
         private System.Windows.Forms.ToolStripMenuItem RechercheSupport;
         private System.Windows.Forms.ToolStripMenuItem RechercheClient;
