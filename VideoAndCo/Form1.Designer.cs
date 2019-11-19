@@ -30,8 +30,8 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Fichier = new System.Windows.Forms.ToolStripMenuItem();
+            this.FichierQuitter = new System.Windows.Forms.ToolStripMenuItem();
             this.Recherche = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RechercheGenre = new System.Windows.Forms.ToolStripMenuItem();
             this.RechercheSupport = new System.Windows.Forms.ToolStripMenuItem();
             this.RechercheClient = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,9 +53,9 @@
             this.ComposantSérieAjout = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantSérieModif = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantSaison = new System.Windows.Forms.ToolStripMenuItem();
-            this.ComposantClient = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantSaisonAjout = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantSaisonModif = new System.Windows.Forms.ToolStripMenuItem();
+            this.ComposantClient = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantClientAjout = new System.Windows.Forms.ToolStripMenuItem();
             this.ComposantClientModif = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -63,6 +63,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Fichier,
             this.Recherche,
@@ -76,14 +77,23 @@
             // 
             // Fichier
             // 
+            this.Fichier.BackColor = System.Drawing.Color.Silver;
             this.Fichier.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quitterToolStripMenuItem});
+            this.FichierQuitter});
+            this.Fichier.ForeColor = System.Drawing.Color.Black;
             this.Fichier.Name = "Fichier";
             this.Fichier.Size = new System.Drawing.Size(54, 20);
             this.Fichier.Text = "Fichier";
             // 
+            // FichierQuitter
+            // 
+            this.FichierQuitter.Name = "FichierQuitter";
+            this.FichierQuitter.Size = new System.Drawing.Size(180, 22);
+            this.FichierQuitter.Text = "Quitter";
+            // 
             // Recherche
             // 
+            this.Recherche.BackColor = System.Drawing.Color.Silver;
             this.Recherche.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RechercheGenre,
             this.RechercheSupport,
@@ -93,12 +103,6 @@
             this.Recherche.Name = "Recherche";
             this.Recherche.Size = new System.Drawing.Size(79, 20);
             this.Recherche.Text = "Recherches";
-            // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.quitterToolStripMenuItem.Text = "Quitter";
             // 
             // RechercheGenre
             // 
@@ -132,6 +136,7 @@
             // 
             // Compte
             // 
+            this.Compte.BackColor = System.Drawing.Color.Silver;
             this.Compte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CompteValid,
             this.CompteVérif,
@@ -167,6 +172,7 @@
             // 
             // Composant
             // 
+            this.Composant.BackColor = System.Drawing.Color.Silver;
             this.Composant.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ComposantGenre,
             this.ComposantFilm,
@@ -189,13 +195,13 @@
             // ComposantGenreAjout
             // 
             this.ComposantGenreAjout.Name = "ComposantGenreAjout";
-            this.ComposantGenreAjout.Size = new System.Drawing.Size(180, 22);
+            this.ComposantGenreAjout.Size = new System.Drawing.Size(142, 22);
             this.ComposantGenreAjout.Text = "Ajout";
             // 
             // ComposantGenreModif
             // 
             this.ComposantGenreModif.Name = "ComposantGenreModif";
-            this.ComposantGenreModif.Size = new System.Drawing.Size(180, 22);
+            this.ComposantGenreModif.Size = new System.Drawing.Size(142, 22);
             this.ComposantGenreModif.Text = "Modification";
             // 
             // ComposantFilm
@@ -206,17 +212,18 @@
             this.ComposantFilm.Name = "ComposantFilm";
             this.ComposantFilm.Size = new System.Drawing.Size(180, 22);
             this.ComposantFilm.Text = "Film";
+            this.ComposantFilm.Click += new System.EventHandler(this.ComposantFilm_Click);
             // 
             // ComposantFilmAjout
             // 
             this.ComposantFilmAjout.Name = "ComposantFilmAjout";
-            this.ComposantFilmAjout.Size = new System.Drawing.Size(180, 22);
+            this.ComposantFilmAjout.Size = new System.Drawing.Size(142, 22);
             this.ComposantFilmAjout.Text = "Ajout";
             // 
             // ComposantFilmModif
             // 
             this.ComposantFilmModif.Name = "ComposantFilmModif";
-            this.ComposantFilmModif.Size = new System.Drawing.Size(180, 22);
+            this.ComposantFilmModif.Size = new System.Drawing.Size(142, 22);
             this.ComposantFilmModif.Text = "Modification";
             // 
             // ComposantSérie
@@ -231,13 +238,13 @@
             // ComposantSérieAjout
             // 
             this.ComposantSérieAjout.Name = "ComposantSérieAjout";
-            this.ComposantSérieAjout.Size = new System.Drawing.Size(180, 22);
+            this.ComposantSérieAjout.Size = new System.Drawing.Size(142, 22);
             this.ComposantSérieAjout.Text = "Ajout";
             // 
             // ComposantSérieModif
             // 
             this.ComposantSérieModif.Name = "ComposantSérieModif";
-            this.ComposantSérieModif.Size = new System.Drawing.Size(180, 22);
+            this.ComposantSérieModif.Size = new System.Drawing.Size(142, 22);
             this.ComposantSérieModif.Text = "Modification";
             // 
             // ComposantSaison
@@ -249,6 +256,18 @@
             this.ComposantSaison.Size = new System.Drawing.Size(180, 22);
             this.ComposantSaison.Text = "Saison";
             // 
+            // ComposantSaisonAjout
+            // 
+            this.ComposantSaisonAjout.Name = "ComposantSaisonAjout";
+            this.ComposantSaisonAjout.Size = new System.Drawing.Size(142, 22);
+            this.ComposantSaisonAjout.Text = "Ajout";
+            // 
+            // ComposantSaisonModif
+            // 
+            this.ComposantSaisonModif.Name = "ComposantSaisonModif";
+            this.ComposantSaisonModif.Size = new System.Drawing.Size(142, 22);
+            this.ComposantSaisonModif.Text = "Modification";
+            // 
             // ComposantClient
             // 
             this.ComposantClient.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -258,39 +277,29 @@
             this.ComposantClient.Size = new System.Drawing.Size(180, 22);
             this.ComposantClient.Text = "Client";
             // 
-            // ComposantSaisonAjout
-            // 
-            this.ComposantSaisonAjout.Name = "ComposantSaisonAjout";
-            this.ComposantSaisonAjout.Size = new System.Drawing.Size(180, 22);
-            this.ComposantSaisonAjout.Text = "Ajout";
-            // 
-            // ComposantSaisonModif
-            // 
-            this.ComposantSaisonModif.Name = "ComposantSaisonModif";
-            this.ComposantSaisonModif.Size = new System.Drawing.Size(180, 22);
-            this.ComposantSaisonModif.Text = "Modification";
-            // 
             // ComposantClientAjout
             // 
             this.ComposantClientAjout.Name = "ComposantClientAjout";
-            this.ComposantClientAjout.Size = new System.Drawing.Size(180, 22);
+            this.ComposantClientAjout.Size = new System.Drawing.Size(142, 22);
             this.ComposantClientAjout.Text = "Ajout";
             // 
             // ComposantClientModif
             // 
             this.ComposantClientModif.Name = "ComposantClientModif";
-            this.ComposantClientModif.Size = new System.Drawing.Size(180, 22);
+            this.ComposantClientModif.Size = new System.Drawing.Size(142, 22);
             this.ComposantClientModif.Text = "Modification";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Page d\'accueil";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -303,7 +312,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Fichier;
         private System.Windows.Forms.ToolStripMenuItem Recherche;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem FichierQuitter;
         private System.Windows.Forms.ToolStripMenuItem RechercheGenre;
         private System.Windows.Forms.ToolStripMenuItem RechercheSupport;
         private System.Windows.Forms.ToolStripMenuItem RechercheClient;
